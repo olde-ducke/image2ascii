@@ -3,9 +3,11 @@ package convert
 
 import (
 	"bytes"
-	"github.com/qeesung/image2ascii/ascii"
 	"image"
 	"image/color"
+
+	"github.com/olde-ducke/image2ascii/ascii"
+
 	// Support decode jpeg image
 	_ "image/jpeg"
 	// Support deocde the png image

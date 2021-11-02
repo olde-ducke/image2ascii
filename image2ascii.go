@@ -4,10 +4,11 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"github.com/qeesung/image2ascii/convert"
 	_ "image/jpeg"
 	_ "image/png"
 	"os"
+
+	"github.com/olde-ducke/image2ascii/convert"
 )
 
 var imageFilename string
