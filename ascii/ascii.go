@@ -4,10 +4,11 @@
 package ascii
 
 import (
-	"github.com/aybabtme/rgbterm"
 	"image/color"
 	"math"
 	"reflect"
+
+	"github.com/aybabtme/rgbterm"
 )
 
 // CharPixel is converted pixel ascii
@@ -107,10 +108,13 @@ func (converter PixelASCIIConverter) roundValue(value float64) int {
 }
 
 func (converter PixelASCIIConverter) reverse(numbers []byte) []byte {
-	for i := 0; i < len(numbers)/2; i++ {
-		j := len(numbers) - i - 1
-		numbers[i], numbers[j] = numbers[j], numbers[i]
-	}
+	//for i := 0; i < len(numbers)/2; i++ {
+	//	j := len(numbers) - i - 1
+	//	numbers[i], numbers[j] = numbers[j], numbers[i]
+	//}
+	i := 0
+	j := len(numbers) - i - 1
+	numbers[i], numbers[j] = numbers[j], numbers[i]
 	return numbers
 }
 

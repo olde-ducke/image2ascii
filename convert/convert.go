@@ -73,7 +73,7 @@ func (converter *ImageConverter) Image2CharPixelMatrix(image image.Image, imageC
 	for i := 0; i < int(newHeight); i++ {
 		line := make([]ascii.CharPixel, 0, newWidth)
 		for j := 0; j < int(newWidth); j++ {
-			pixel := color.NRGBAModel.Convert(newImage.At(j, i))
+			pixel := color.RGBAModel.Convert(newImage.At(j, i))
 			// Convert the pixel to ascii char
 			pixelConvertOptions := ascii.NewOptions()
 			pixelConvertOptions.Colored = imageConvertOptions.Colored

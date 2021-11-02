@@ -108,7 +108,7 @@ func (handler *ImageResizeHandler) ScaleImage(image image.Image, options *Option
 		log.Fatal(err)
 	}
 
-	newImage = resize.Resize(uint(newWidth), uint(newHeight), image, resize.Lanczos3)
+	newImage = resize.Resize(uint(newWidth), uint(newHeight), image, resize.NearestNeighbor)
 	return
 }
 
